@@ -121,6 +121,7 @@ int LIS(struct node *arr, int len)
 	}
 	return arr_w_id;
 }
+
 int bestSeqAtIndex(int* height, int heightSize, int* weight, int weightSize){
 	int ans = 0;
 	struct node arr[LEN];
