@@ -45,28 +45,50 @@
 /**
  * 输入三个数a, b, c, 要求按从小到大的顺序输出。
  */
+// #include <stdio.h>
+// void main()
+// {
+//     int a, b, c, temp;
+//     scanf("%d%d%d", &a, &b, &c);
+//     if (a > b)
+//     {
+//         temp = a;
+//         a = b;
+//         b = temp;
+//     }
+//     if (a > c)
+//     {
+//         temp = a;
+//         a = c;
+//         c = temp;
+//     }
+//     if (b > c)
+//     {
+//         temp = b;
+//         b = c;
+//         c = temp;
+//     }
+//     printf("%d%d%d", a, b, c);
+// }
+
 #include <stdio.h>
 void main()
 {
-    int a, b, c, temp;
-    scanf("%d%d%d", &a, &b, &c);
-    if (a > b)
+    char ch;
+    int a = 3;
+    //scanf("%c", &ch);
+    //ch = (ch >= 'A' && ch <= 'Z') ? ch + 32 : ch;
+    printf("%c", ch);
+    switch (a)
     {
-        temp = a;
-        a = b;
-        b = temp;
+    case 1:
+        printf("1");
+        break;
+    case 2:
+        printf("2");
+        break;
+    default:
+        printf("error");
+        break;
     }
-    if (a > c)
-    {
-        temp = a;
-        a = c;
-        c = temp;
-    }
-    if (b > c)
-    {
-        temp = b;
-        b = c;
-        c = temp;
-    }
-    printf("%d%d%d", a, b, c);
 }

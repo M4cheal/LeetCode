@@ -16,4 +16,25 @@
 ### if-else
 ### if-else-if
 
-### 视频：if 语句嵌套（分支04）删
+### if嵌套
+#### 为避免二义性，就近原则
+
+### 三目运算符 表达式1 ? 表达式2 : 表达式3
+
+### switch语句
+```
+switch (a)
+    {
+    case 1:
+        printf("1");
+        break;
+    case 2:
+        printf("2");
+        break;
+    default:
+        printf("error");
+        break;
+    }
+```
+
+#### 第四章05
