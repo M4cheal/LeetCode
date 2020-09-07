@@ -71,24 +71,111 @@
 //     printf("%d%d%d", a, b, c);
 // }
 
+// #include <stdio.h>
+// void main()
+// {
+//     char ch;
+//     int a = 3;
+//     //scanf("%c", &ch);
+//     //ch = (ch >= 'A' && ch <= 'Z') ? ch + 32 : ch;
+//     printf("%c", ch);
+//     switch (a)
+//     {
+//     case 1:
+//         printf("1");
+//         break;
+//     case 2:
+//         printf("2");
+//         break;
+//     default:
+//         printf("error");
+//         break;
+//     }
+// }
+/**
+ * 计算器
+ */
+// #include <stdio.h>
+// void main()
+// {
+//     double a, b;
+//     char c;
+//     printf("input expression : a (+-*/) b\n");
+//     scanf("%lf%c%lf", &a, &c, &b);
+//     switch (c)
+//     {
+//     case '+':
+//         printf("%lf", a + b);
+//         break;
+//     case '-':
+//         printf("%lf", a - b);
+//         break;
+//     case '*':
+//         printf("%lf", a * b);
+//         break;
+//     case '/':
+//         printf("%lf", a / b);
+//         break;
+//     default:
+//         printf("input error");
+//         break;
+//     }
+// }
+
+/**
+ * 输入年份，判断是否为闰年
+ */
+// #include <stdio.h>
+// void main()
+// {
+//     int year, leap;
+//     scanf("%d", &year);
+//     if (year%4 == 0)
+//     {
+//         if (year%100 == 0)
+//         {
+//             if (year%400 == 0)
+//             {
+//                 leap = 1;
+//             }else
+//             {
+//                 leap = 0;
+//             }
+//         }
+//         else
+//         {
+//             leap == 1;
+//         }
+//     }
+//     else
+//     {
+//         leap == 0;
+//     }
+//     leap?printf("leap"):printf("no leap");
+// }
+
+/**
+ * 一个整数，加上100后是一个完全平方数，
+ * 再加上168又是一个完全平方数，
+ * 请问该数是多少?
+ */
 #include <stdio.h>
+#include <math.h>
 void main()
 {
-    char ch;
-    int a = 3;
-    //scanf("%c", &ch);
-    //ch = (ch >= 'A' && ch <= 'Z') ? ch + 32 : ch;
-    printf("%c", ch);
-    switch (a)
+    for (int i = 0; i < 100000; i++)
     {
-    case 1:
-        printf("1");
-        break;
-    case 2:
-        printf("2");
-        break;
-    default:
-        printf("error");
-        break;
+        int a = i;
+        a+=100;
+        double s = sqrt(a);
+
+        if (floor(s + 0.5) == s)
+        {
+            a+=168;
+            if(floor(s + 0.5) == s)
+            {
+                printf("%d \n", i);
+            }
+        }
     }
 }
