@@ -11,3 +11,8 @@ void main()
     printf("%d", n);
     
 }
+
+#include <conio.h> // getch和putch
+
+// ESC ACSII码为27
+// Enter ACSII码为13
