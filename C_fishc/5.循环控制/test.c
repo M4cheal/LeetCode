@@ -16,3 +16,5 @@ void main()
 
 // ESC ACSII码为27
 // Enter ACSII码为13
+
+// 素数只能被1和本身整除
