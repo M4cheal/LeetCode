@@ -57,7 +57,7 @@ void swap(struct student* p, struct student* q)  //交换函数
 	p->score ^= q->score;
 	q->score ^= p->score;
 	p->score ^= q->score;
-	
+
 }
 void fun(struct student* a, struct student* b) //合并并排序
 {

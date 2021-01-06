@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{	
+	char ch;
+	FILE *fptr, *copyptr;
+	if ((fptr = fopen("D:\\sun.txt", "r")) == NULL)
+	{
+     	printf("Can't open the source file.\n");
+	}
+	else if ((copyptr = fopen("D:\\sun2.txt", "w")) == NULL)
+	{
+		printf("Can't open the destination file.\n");
+	}
+while((ch=fgetc(fptr))!=EOF)
+{
+		  if(ch=='/')
+		  {
+			  if((ch=fgetc(fptr))=='/')
+			  {
+				  while((ch=fgetc(fptr))!=EOF&&ch!='\n')
+				  {  };
+				  fputc(ch,copyptr);
+			  }
+			  else if(ch=='*')
+				  while((ch=fgetc(fptr))!=EOF&&ch!='*'||(ch=fgetc(fptr))!=EOF&&ch!='/');
+				  else
+				  {
+					  fputc('/',copyptr);
+					  fputc(ch,copyptr);
+				  }
+		  }
+		  else
+			  fputc(ch,copyptr);
+	  }
+	  fclose(fptr);
+	  fclose(copyptr);
+}
